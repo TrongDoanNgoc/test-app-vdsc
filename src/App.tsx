@@ -1,16 +1,20 @@
+import {NavigationContainer} from '@react-navigation/native';
 import React from 'react';
-import {Text, View} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {
   initialWindowMetrics,
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
+import {navigationRef} from '@/services/navigationRef';
+import Home from './screens/Home';
 
 const App = () => {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <GestureHandlerRootView style={{flex: 1}}>
-        <Text>Hello World1</Text>
+        <NavigationContainer ref={navigationRef}>
+          <Home />
+        </NavigationContainer>
       </GestureHandlerRootView>
     </SafeAreaProvider>
   );
