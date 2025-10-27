@@ -6,14 +6,14 @@ import {
   SafeAreaProvider,
 } from 'react-native-safe-area-context';
 import {navigationRef} from '@/services/navigationRef';
-import Home from './screens/Home';
+import {Routes} from './navigation/Routes';
 
 const App = () => {
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <GestureHandlerRootView style={{flex: 1}}>
         <NavigationContainer ref={navigationRef}>
-          <Home />
+          <Routes />
         </NavigationContainer>
       </GestureHandlerRootView>
     </SafeAreaProvider>
