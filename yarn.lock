@@ -5744,15 +5744,10 @@ react-native-is-edge-to-edge@^1.2.1:
   resolved "https://registry.yarnpkg.com/react-native-is-edge-to-edge/-/react-native-is-edge-to-edge-1.2.1.tgz#64e10851abd9d176cbf2b40562f751622bde3358"
   integrity sha512-FLbPWl/MyYQWz+KwqOZsSyj2JmLKglHatd3xLZWskXOpRaio4LfEDEz8E/A6uD8QoTHW6Aobw1jbEwK7KMgR7Q==
 
-react-native-mmkv@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-4.0.0.tgz#ef04726ec4af074d349de286036607d05a98e9f5"
-  integrity sha512-Osoy8as2ZLzO1TTsKxc4tX14Qk19qRVMWnS4ZVBwxie9Re5cjt7rqlpDkJczK3H/y3z70EQ6rmKI/cNMCLGAYQ==
-
-react-native-nitro-fetch@^0.1.3:
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/react-native-nitro-fetch/-/react-native-nitro-fetch-0.1.3.tgz#73cb95f11e4fddd46525c12928b5d7a0fa14ce6b"
-  integrity sha512-+WGyjPE0Kx5bBeRzhqVoc2DCcn9XcN//QUAJbuSrstf7pi8UJXicT+Zz0tdCuuG52yxn8dpsM2WUzUnP1+uGPg==
+react-native-mmkv@3.3.3:
+  version "3.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-3.3.3.tgz#1f0326f6314e23725af8145964343224d074e6cd"
+  integrity sha512-GMsfOmNzx0p5+CtrCFRVtpOOMYNJXuksBVARSQrCFaZwjUyHJdQzcN900GGaFFNTxw2fs8s5Xje//RDKj9+PZA==
 
 react-native-nitro-modules@^0.29.8:
   version "0.29.8"
@@ -5788,11 +5783,6 @@ react-native-svg@^15.14.0:
     css-select "^5.1.0"
     css-tree "^1.1.3"
     warn-once "0.1.1"
-
-react-native-vision-camera@^4.7.2:
-  version "4.7.2"
-  resolved "https://registry.yarnpkg.com/react-native-vision-camera/-/react-native-vision-camera-4.7.2.tgz#e4bd8f3d893a3f5fa9d8224ce28b8ef00d171bc1"
-  integrity sha512-C+5PvlSunN6I4aYplSask+v3jfhgduZumIVw6H6lG+Afpf8boIcG3uFSsSfVgj+hxI7fx6qM6bsciEhzgxEUYg==
 
 react-native-worklets@^0.6.1:
   version "0.6.1"

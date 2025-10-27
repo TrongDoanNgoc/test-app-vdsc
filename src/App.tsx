@@ -1,10 +1,16 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {Text} from 'react-native';
+import {GestureHandlerRootView} from 'react-native-gesture-handler';
+import {SafeAreaProvider} from 'react-native-safe-area-context';
 
-export const App = () => {
+const App = () => {
   return (
-    <View>
-      <Text>Hello World</Text>
-    </View>
+    <SafeAreaProvider>
+      <GestureHandlerRootView style={{flex: 1}}>
+        <Text>Hello World</Text>
+      </GestureHandlerRootView>
+    </SafeAreaProvider>
   );
 };
+
+export default App;
