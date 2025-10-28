@@ -12,7 +12,7 @@ import {useRandomUser} from '../states/queries/getRandomUser';
 import {RefreshCw} from 'lucide-react-native';
 
 const RandomUser = () => {
-  const {data, isLoading, error, refetch} = useRandomUser();
+  const {data, isLoading, error, refetch, isRefetching} = useRandomUser();
 
   const handleRefresh = () => {
     refetch();
@@ -61,7 +61,10 @@ const RandomUser = () => {
           </Text>
           <Text style={styles.nationality}>{user.nat}</Text>
         </View>
-        <TouchableOpacity style={styles.refreshButton} onPress={handleRefresh}>
+        <TouchableOpacity
+          disabled={isRefetching}
+          style={styles.refreshButton}
+          onPress={handleRefresh}>
           <RefreshCw size={20} color="#007AFF" />
         </TouchableOpacity>
       </View>
