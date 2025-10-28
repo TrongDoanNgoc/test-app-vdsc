@@ -10,6 +10,7 @@ import {
 import React, {useState} from 'react';
 import {User} from 'lucide-react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
+import RandomUser from '@/components/RandomUser';
 
 const {width: winDim} = Dimensions.get('window');
 const isIOS = Platform.OS === 'ios';
@@ -60,7 +61,7 @@ const Home = () => {
         </View>
 
         <View style={styles.content}>
-          <Text style={styles.contentText}>Home Screen</Text>
+          <RandomUser />
         </View>
       </View>
     </Drawer>
@@ -103,12 +104,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  contentText: {
-    fontSize: 16,
-    color: '#8E8E93',
   },
   drawerStyle: {
     width: Math.min(400, winDim * 0.8),
