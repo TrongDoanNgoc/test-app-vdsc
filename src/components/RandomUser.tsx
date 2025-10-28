@@ -1,7 +1,6 @@
 import {
   ActivityIndicator,
   Image,
-  RefreshControl,
   ScrollView,
   StyleSheet,
   Text,
@@ -13,7 +12,7 @@ import {useRandomUser} from '../states/queries/getRandomUser';
 import {RefreshCw} from 'lucide-react-native';
 
 const RandomUser = () => {
-  const {data, isLoading, error, refetch, isRefetching} = useRandomUser();
+  const {data, isLoading, error, refetch} = useRandomUser();
 
   const handleRefresh = () => {
     refetch();
@@ -50,11 +49,7 @@ const RandomUser = () => {
   const user = data.results[0];
 
   return (
-    <ScrollView
-      style={styles.container}
-      refreshControl={
-        <RefreshControl refreshing={isRefetching} onRefresh={handleRefresh} />
-      }>
+    <ScrollView style={styles.container}>
       <View style={styles.header}>
         <Image source={{uri: user.picture.large}} style={styles.avatar} />
         <View style={styles.headerInfo}>

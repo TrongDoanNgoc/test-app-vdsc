@@ -6,6 +6,7 @@ import HomeScreen from '@/screens/Home';
 import PostsScreen from '@/screens/Posts';
 import UserScreen from '@/screens/User';
 import {RootStackParamList} from './types';
+import {useRandomUserSideEffect} from '@/hooks/useRandomUserSideEffect';
 
 const BottomTab = createBottomTabNavigator<RootStackParamList>();
 
@@ -23,6 +24,7 @@ const UserTabIcon = (props: {color: string; size: number}) => (
 
 export const Routes = () => {
   const isDark = useColorScheme() === 'dark';
+  useRandomUserSideEffect();
 
   return (
     <BottomTab.Navigator
