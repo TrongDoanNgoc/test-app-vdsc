@@ -7,10 +7,15 @@ import {
 } from 'react-native-safe-area-context';
 import {navigationRef} from '@/services/navigationRef';
 import {Routes} from './navigation/Routes';
-import {QueryProvider} from '@/lib/react-query';
+import {queryClient, QueryProvider} from '@/lib/react-query';
 import {globalStyles} from '@/styles/globalStyles';
+import {useNetworkActivityDevTools} from '@rozenite/network-activity-plugin';
+import {useTanStackQueryDevTools} from '@rozenite/tanstack-query-plugin';
 
 const App = () => {
+  useNetworkActivityDevTools();
+  useTanStackQueryDevTools(queryClient);
+
   return (
     <SafeAreaProvider initialMetrics={initialWindowMetrics}>
       <GestureHandlerRootView style={globalStyles.flex}>
