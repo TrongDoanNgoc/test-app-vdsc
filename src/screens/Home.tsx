@@ -1,5 +1,7 @@
 import {Drawer} from 'react-native-drawer-layout';
 import {
+  Alert,
+  Button,
   Dimensions,
   Platform,
   StyleSheet,
@@ -11,6 +13,8 @@ import React, {useState} from 'react';
 import {User} from 'lucide-react-native';
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import RandomUser from '@/components/RandomUser';
+import {Key, MMKVStore} from '@/storages/mmkv';
+import {usePostsStore} from '@/stores/PostsStore';
 
 const {width: winDim} = Dimensions.get('window');
 const isIOS = Platform.OS === 'ios';
@@ -23,13 +27,19 @@ const Home = () => {
     setLeftDrawerOpen(true);
   };
 
+  const handleClearPosts = () => {
+    usePostsStore.getState().clearPosts();
+    setLeftDrawerOpen(false);
+  };
+
   const renderLeftDrawer = () => (
     <View style={[styles.drawerContainer, {paddingTop: insets.top}]}>
       <Text style={styles.drawerTitle}>User Menu</Text>
       <View style={styles.drawerContent}>
-        <Text style={styles.drawerText}>Profile</Text>
-        <Text style={styles.drawerText}>Settings</Text>
-        <Text style={styles.drawerText}>Logout</Text>
+        <Button title="Profile" onPress={() => {}} />
+        <Button title="Settings" onPress={() => {}} />
+        <Button title="Logout" onPress={() => {}} />
+        <Button title="Clear Posts" onPress={handleClearPosts} />
       </View>
     </View>
   );

@@ -4,6 +4,7 @@ export const mmkv = createMMKV();
 
 export enum Key {
   demo = 'demo-1',
+  keyPosts = 'dnt_posts_key',
 }
 
 export const MMKVStore = {
